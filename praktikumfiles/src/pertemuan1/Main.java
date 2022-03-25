@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Main {
+    // Need IOException for BufferedReader
+    // Remove IOException for Scanner
     public static void main(String[] args) throws IOException {
 
         /*
