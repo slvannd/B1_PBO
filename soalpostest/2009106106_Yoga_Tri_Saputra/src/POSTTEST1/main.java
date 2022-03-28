@@ -1,9 +1,5 @@
 package POSTTEST1;
 
-/**
- *
- * @author Asus
- */
 import java.util.ArrayList; 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -39,7 +35,7 @@ public static void menu()throws IOException{
     } else if (pilih.equals("4")){
         HapusData();
     } else if (pilih.equals("5")){
-        System.exit(1);
+        System.exit(0);
     } else {
         System.out.println("Inputan Yang Anda Masukan Salah !");
         }    
@@ -90,7 +86,8 @@ public static void LihatData()throws IOException{
             System.out.println("Warna Helm  : " + helm.get(i).warna);
             System.out.println("Ukuran Helm : " + helm.get(i).ukuran);
             System.out.println("Jumlah Helm : " + helm.get(i).jumlah);
-            System.out.println("Harga Helm  : \n" + helm.get(i).harga);
+            System.out.println("Harga Helm  : " + helm.get(i).harga);
+            System.out.println(" ");
             }
         }
     }
