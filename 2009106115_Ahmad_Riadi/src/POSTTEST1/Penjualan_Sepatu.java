@@ -12,9 +12,9 @@ public class Penjualan_Sepatu {
         int pilih_menu;
         int perulangan = 1;
         // menambah beberapa data barang ke dalam array list
-        SP.tambahBarang(new sepatu("A11","Sport_Adan","Puma_Adan",15,"Hitam_Adan",15000));
-        SP.tambahBarang(new sepatu("A12","Sport_Yoga","Puma_Yoga",25,"Hitam_Yoga",25000));
-        SP.tambahBarang(new sepatu("A13","Sport_Eric","Puma_Eric",35,"Hitam_Erik",35000));
+        SP.tambahBarang(new sepatu("A11","Sports",  "Nike",      15,"Hitam",15000));
+        SP.tambahBarang(new sepatu("A12","Sneakers","Adidas",    25,"Merah",25000));
+        SP.tambahBarang(new sepatu("A13","Boats",   "Aerostreet",35,"Hijau",35000));
 
         while(perulangan ==1){
         System.out.println("-----------------------------------");
