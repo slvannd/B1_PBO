@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package POSTTEST1;
-import java.util.Scanner;
+
 import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author MSI Gaming
  */
-public class Main {
+public class Jasajahit {
     ArrayList<DataPelanggan> data_pelanggan = new ArrayList<>();
     String labelDataPelanggan   = "--  DATA PELANGGAN  --";
     String garisDataPelanggan   = "======================";
@@ -312,3 +314,5 @@ public class Main {
         }
     }
 }
+
+
