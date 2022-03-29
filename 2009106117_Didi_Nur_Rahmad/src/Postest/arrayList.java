@@ -95,6 +95,7 @@ public class arrayList {
                 break;
             case 4:
                 System.out.println("Hapus Data\n");
+                hapusLaptop();
                 break;
             case 5:
                 System.out.println("Byebyee..");
@@ -146,15 +147,13 @@ public class arrayList {
     }
 
     static void editLaptop() {
-        isEditing = true;
-     
-
-        try {
+        
         System.out.println("\n\nPilih Indeks dari data List Laptop ");
         int ind = Integer.parseInt(input.nextLine());
 
         if (ind > ListLaptop.size()) {
-            throw new IndexOutOfBoundsException("Data yang kamu masukan salah!");
+            System.out.println("Data yang kamu masukan salah!");
+            menuLaptop();
         } else {
             System.out.print("Nama Baru Laptop      : ");
             String namaBaruNL = input.nextLine();
@@ -163,19 +162,38 @@ public class arrayList {
             //data Setelah di Ubah
             ListLaptop.set(ind, namaBaruNL);
             TotalLaptop.set(ind, totalBaruTL);           
-                    
+             kembali();      
         }      
-        } catch (IndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println(e.getMessage());
-        }
-
-        isEditing = false;
-        kembali();
-    
     }
-        
     
+    static void hapusLaptop() {
+        System.out.println("===== Hapus Peserta =====");
+        if(ListLaptop.isEmpty()) System.out.println("Data Kosong!");
+        else {
+            System.out.println("===============================================");
+            for(int i = 0; i < ListLaptop.size(); i++) {
+                System.out.println("NO\tNama Laptop\t\tTotal Stok");
+                System.out.println("===========================================================");
 
+                for(String NL : ListLaptop){
+                    int TL = TotalLaptop.get(i);
+                    System.out.println(String.format("[%d] %s\t\t\t\t\t%s", i , NL, TL));
+
+                    i++;                 
+            }
+            }
+            System.out.print("Masukkan No index ingin dihapus: ");
+            int no = input.nextInt();
+            ListLaptop.remove(no-1);
+            TotalLaptop.remove(no-1);
+            System.out.println("Data telah dihapus!");
+        }
+        System.out.print("Tekan Enter untuk melanjutkan...");
+        input.nextLine();
+
+
+        }
+                
     public static void main(String[] args) {
         
         menuUtama(); 
