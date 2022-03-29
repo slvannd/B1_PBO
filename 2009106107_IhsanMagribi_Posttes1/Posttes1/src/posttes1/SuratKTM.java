@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Program BY Ihsan Magribi 2009106107
 package posttes1;
 
-/**
- *
- * @author salim
- */
 public class SuratKTM {
-    int nik;
+    int Nik;
     String Nama;
     String TanggalLahir;
     String JenisKelamin;
@@ -20,7 +12,7 @@ public class SuratKTM {
     String Keperluan;
     SuratKTM(int nik, String nm, String ttl, String jk, int rt, int rw, String kec, String kep)
     {
-        this.nik = nik;
+        this.Nik = nik;
         this.Nama = nm;
         this.TanggalLahir = ttl;
         this.JenisKelamin = jk;
@@ -31,13 +23,9 @@ public class SuratKTM {
 
     }
 
-    SuratKTM(int id, String nm) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    } // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody}
-     
     public int getnik()
     {
-       return nik;
+       return Nik;
     }
      
     public String getnm()
