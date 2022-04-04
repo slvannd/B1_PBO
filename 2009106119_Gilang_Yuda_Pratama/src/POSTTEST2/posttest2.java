@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class posttest1 {
+public class posttest2 {
 
     static ArrayList<String> artikel;
     static ArrayList<String> warna;
@@ -52,8 +52,8 @@ public class posttest1 {
         System.out.println("==============================================");
         System.out.println("[1] Lihat data barang");
         System.out.println("[2] Tambah data barang");
-        System.out.println("[3] Edit Todo barang");
-        System.out.println("[4] Hapus Todo baraang");
+        System.out.println("[3] Edit data barang");
+        System.out.println("[4] Hapus data baraang");
         System.out.println("[0] Keluar");
         System.out.println("----------------------------------------------");
         System.out.print("Pilih menu :  ");
@@ -89,14 +89,14 @@ public class posttest1 {
         clearScreen();
     }
 
-    static void lihatdata(){
+    static void lihatdata() {
         clearScreen();
         if (artikel.size() > 0) {
             System.out.println("=============================================================");
             System.out.println("NO\tARTIKEL\t\tWARNA\t\tHARGA\t\tTOTAL");
             System.out.println("=============================================================");
             int index = 0;
-            for(String a : artikel){
+            for (String a : artikel) {
                 String b = warna.get(index);
                 String c = harga.get(index);
                 Integer d = totalbrg.get(index);
@@ -104,14 +104,13 @@ public class posttest1 {
                 System.out.println("-------------------------------------------------------------");
                 index++;
             }
-        }
-        else {
+        } else {
             System.out.println("Tidak ada data!");
         }
 
-            if (!isEditing) {
-                kembali();
-            }
+        if (!isEditing) {
+            kembali();
+        }
     }
 
     static void tambahdata() {
@@ -129,9 +128,10 @@ public class posttest1 {
         System.out.print("Masukkan Total Barang : ");
         int d = input.nextInt();
         totalbrg.add(d);
-
-        System.out.println("Berhasil ditambahkan!");
         
+        data dataSaya = new data(a, b, c, d);
+        dataSaya.dataDitambah();
+
         isEditing = false;
         kembali();
     }
@@ -163,11 +163,14 @@ public class posttest1 {
                 warna.set(index, newb);
                 harga.set(index, newc);
                 totalbrg.set(index, newd);
+                
+                data dataSaya = new data(newa, newb, newc, newd);
+                dataSaya.dataDiubah();
             }
         } catch (IndexOutOfBoundsException | NumberFormatException e) {
             System.out.println(e.getMessage());
         }
-
+        
         isEditing = false;
         kembali();
     }
@@ -185,13 +188,15 @@ public class posttest1 {
                 throw new IndexOutOfBoundsException("Kamu memasukan data yang salah!");
             } else {
 
-                System.out.println("Kamu akan menghapus Index ke "+ index);
+                System.out.println("Kamu akan menghapus Index ke " + index);
                 System.out.println("Apa kamu yakin?");
                 System.out.print("Jawab (y/t): ");
                 String jawab = input.nextLine();
 
                 if (jawab.equalsIgnoreCase("y")) {
                     artikel.remove(index);
+                    data dataSaya = new data(jawab);
+                    dataSaya.dataDihapus();
                 }
             }
         } catch (IndexOutOfBoundsException e) {
