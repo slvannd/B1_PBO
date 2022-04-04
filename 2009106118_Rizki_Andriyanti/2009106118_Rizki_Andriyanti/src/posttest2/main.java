@@ -24,17 +24,19 @@ public class main {
         System.out.println(luxury.negara);
         System.out.println(luxury.harga);
         System.out.println(" ");
+        
         luxury.setBrand("Charles & Keith");
         luxury.setNamatas("Tas Charlot Jacquard Printed");
         luxury.setKode(807);
         luxury.setNegara("Indonesia");
         luxury.setHarga(1.149);
         System.out.println(" ");
+        
         System.out.println("Brand : " +luxury.getBrand());
         System.out.println("Nama Tas : " +luxury.getNamatas());
         System.out.println("Warna : " +luxury.getColor());
         System.out.println("Kode : " +luxury.getKode());
         System.out.println("Negara Tujuan : " +luxury.getNegara());
-        System.out.println("Harga : " +luxury.getHarga());
+        System.out.println("Harga :Rp " +luxury.getHarga());
     }
 }
