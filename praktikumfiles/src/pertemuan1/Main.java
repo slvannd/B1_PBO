@@ -3,79 +3,85 @@ package pertemuan1;
 import pertemuan1.model.Mouse;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
-    // Need IOException for BufferedReader
-    // Remove IOException for Scanner
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        /*
-         // Making object of Mouse by using primary constructor
-        Mouse logitech = new Mouse("Logitech", 146, 6, "White");
+        // Create an instance ob BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        // Making object of Mouse by using primary constructor
-        Mouse apple = new Mouse();
+        // Create an instance of ArrayList based on Mouse class
+        ArrayList<Mouse> mouseList = new ArrayList<>();
 
-        // Set value to object of Mouse using setter methods
-        apple.setBrand("Apple");
-        apple.setWeight(100);
-        apple.setColor("White");
-        apple.setTotalButton(1);
+        try {
+            do {
+                menu();
+                System.out.print("Pilih menu: ");
+                int menu = Integer.parseInt(br.readLine());
 
-        // Print object of Mouse using getter methods
-        System.out.println("Brand: " + logitech.getBrand());
-        System.out.println("Weight: " + logitech.getWeight());
-        System.out.println("Color: " + logitech.getColor());
-        System.out.println("Total Button: " + logitech.getTotalButton());
-         */
+                switch (menu) {
+                    case 1: {
+                        System.out.print("Masukkan brand mouse: ");
+                        String nama = br.readLine();
+                        System.out.print("Masukkan berat mouse: ");
+                        int berat = Integer.parseInt(br.readLine());
+                        System.out.print("Masukkan jumlah tombol mouse: ");
+                        int jumlahTombol = Integer.parseInt(br.readLine());
+                        System.out.print("Masukkan warna mouse: ");
+                        String warna = br.readLine();
+                        mouseList.add(new Mouse(nama, berat, jumlahTombol, warna));
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("List Mouse");
+                        for (Mouse mouse : mouseList) {
+                            System.out.println(mouse.getBrand());
+                            System.out.println(mouse.getWeight());
+                            System.out.println(mouse.getTotalButton());
+                            System.out.println(mouse.getColor());
+                        }
+                        break;
+                    }
+                    case 3: {
+                        System.out.print("Masukkan brand mouse yang mau dihapus: ");
+                        String nama = br.readLine();
+                        mouseList.removeIf(mouse -> mouse.getBrand().equals(nama));
+                        break;
+                    }
+                    case 4: {
+                        System.out.print("Masukkan brand mouse yang mau diupdate: ");
+                        String nama = br.readLine();
+                        for (Mouse mouse : mouseList) {
+                            if (mouse.getBrand().equals(nama)) {
+                                System.out.print("Masukkan brand mouse: ");
+                                mouse.setBrand(br.readLine());
+                                System.out.print("Masukkan berat mouse: ");
+                                mouse.setWeight(Integer.parseInt(br.readLine()));
+                                System.out.print("Masukkan jumlah tombol mouse: ");
+                                mouse.setTotalButton(Integer.parseInt(br.readLine()));
+                                System.out.print("Masukkan warna mouse: ");
+                                mouse.setColor(br.readLine());
+                            }
+                        }
+                        break;
+                    }
+                    default: {
+                        System.exit(0);
+                    }
+                }
+            } while (true);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
-        /*
-        // Making Scanner object
-        Scanner keyboard = new Scanner(System.in);
-
-        // Entering value to name with Scanner object -> keyboard
-        System.out.print("Enter name: ");
-        String name = keyboard.nextLine();
-
-        // Entering value to studentID with Scanner object -> keyboard
-        System.out.print("Enter student's ID: ");
-        String studentID = keyboard.nextLine();
-
-        // Entering value to studentGPA with Scanner object -> keyboard
-        System.out.print("Enter student's GPA: ");
-        float studentGPA = keyboard.nextFloat();
-
-        // Or entering value to studentGPA with Scanner object -> keyboard and convert to float
-        // float studentGPA = Float.parseFloat(keyboard.nextLine());
-
-        // print out the value of name, studentID, and studentGPA
-        System.out.println("Name: " + name);
-        System.out.println("Student ID: " + studentID);
-        System.out.println("Student GPA: " + studentGPA);
-
-         */
-
-        // Making input with BufferedReader and InputStreamReader
-        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-        // Entering value to name with BufferedReader object -> keyboard
-        System.out.print("Enter name: ");
-        String name = keyboard.readLine();
-
-        // Entering value to studentID with BufferedReader object -> keyboard
-        System.out.print("Enter student's ID: ");
-        String studentID = keyboard.readLine();
-
-        // Or entering value to studentGPA with BufferedReader object -> keyboard and convert to float
-        System.out.print("Enter student's GPA: ");
-        float studentGPA = Float.parseFloat(keyboard.readLine());
-
-        // print out the value of name, studentID, and studentGPA
-        System.out.println("Name: " + name);
-        System.out.println("Student ID: " + studentID);
-        System.out.println("Student GPA: " + studentGPA);
-
+    private static void menu() {
+        System.out.println("1. Add Mouse");
+        System.out.println("2. Show Mouse");
+        System.out.println("3. Delete Mouse");
+        System.out.println("4. Update Mouse");
+        System.out.println("5. Exit");
     }
 }
