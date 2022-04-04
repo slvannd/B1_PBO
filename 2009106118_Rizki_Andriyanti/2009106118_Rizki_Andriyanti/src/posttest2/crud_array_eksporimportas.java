@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package posttest1;
+package posttest2;
 
+import posttest1.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
