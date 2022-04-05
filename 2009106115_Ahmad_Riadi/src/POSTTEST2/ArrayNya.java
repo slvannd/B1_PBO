@@ -10,7 +10,22 @@ class ArrayNya {
         this.list_sepatu.add(data);}
      
     void hapusBarang(String kode){
-        this.list_sepatu.removeIf(item -> item.KodeBarang.equals(kode));}
+        boolean ditemukan = false;
+        int index = -1;
+        for(int i=0; i<this.list_sepatu.size(); i++){
+            if (this.list_sepatu.get(i).KodeBarang.equals(kode)){
+                index = i;
+                ditemukan = true;
+            }
+        }
+        if (ditemukan == true){
+          this.list_sepatu.removeIf(item -> item.KodeBarang.equals(kode));
+          System.out.println("   Data sepatu Berhasil dihapus");
+}
+        else {
+            System.out.println("   Data sepatu tidak ditemukan");}
+
+}
      
     void ubahData(String kode,sepatu data){
         boolean ditemukan = false;
@@ -24,9 +39,10 @@ class ArrayNya {
 
         if (ditemukan == true){
           this.list_sepatu.set(index,data);
+          System.out.println("   Data sepatu Berhasil diubah");
 }
         else {
-            System.out.println("Data sepatu tidak ditemukan");}
+            System.out.println("   Data sepatu tidak ditemukan");}
 }
 
 
@@ -43,13 +59,10 @@ class ArrayNya {
         if (ditemukan == true){
             this.list_sepatu.get(index).print();}
         else {
-            System.out.println("Data barang tidak ditemukan");}
+            System.out.println("   Data barang tidak ditemukan");}
             }
      
     void tampilBarang(int pilih_menu){
-
-
-
         if(pilih_menu ==1){
         for(sepatu item: this.list_sepatu){
             item.print();
