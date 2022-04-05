@@ -10,70 +10,65 @@ package posttest2;
  * @author RIRI-CHAN
  */
 public class tas {
-    String brand;
-    String namatas;
-    String color;
+    //    property/atribut
     int kode;
-    String negara;
-    double harga;
+    String tgl;
+    String namaTas;
+    String brand;
+    String tujuan;
+    String status;
     
-    public tas(String brand, String namatas, String color, int kode, String negara, Double harga){
-        this.brand = brand;
-        this.namatas = namatas;
-        this.color = color;
+//    metode khusus
+    tas(int kode, String namaTas, String brand, String status, String tujuan, String tgl){
         this.kode = kode;
-        this.negara = negara;
-        this.harga = harga;
-        
+        this.namaTas = namaTas;
+        this.brand = brand;
+        this.tujuan = status;
+        this.tujuan = tujuan;
+        this.tgl = tgl;
+    }
+   
+//    metode
+    
+    public String getnamaTas(String namaTas) {
+        return namaTas;
+    }
+    
+    public void setnamaTas(String namaTas) {
+        this.namaTas = namaTas;
     }
 
-    public String getBrand() {
+    public String getbrand(String brand) {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setbrand(String brand) {
         this.brand = brand;
     }
 
-    public String getNamatas() {
-        return namatas;
-    }
-
-    public void setNamatas(String namatas) {
-        this.namatas = namatas;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getKode() {
+    public int getkode() {
         return kode;
     }
 
-    public void setKode(int kode) {
+    public void sekode(int kode) {
         this.kode = kode;
     }
 
-    public String getNegara() {
-        return negara;
+    public String gettujuan(String tujuan) {
+        return tujuan;
     }
 
-    public void setNegara(String negara) {
-        this.negara = negara;
+    public void settujuan(String tujuan) {
+        this.tujuan = tujuan;
     }
 
-    public double getHarga() {
-        return harga;
+    public String gettgl(String tgl) {
+        return tgl;
     }
 
-    public void setHarga(double harga) {
-        this.harga = harga;
-    }
+    public void settgl(String tgl) {
+        this.tgl = tgl;
+    }  
     
     
     
