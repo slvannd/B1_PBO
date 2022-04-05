@@ -1,3 +1,5 @@
+package POSTTEST2;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -129,8 +131,13 @@ public class posttest2 {
         int d = input.nextInt();
         totalbrg.add(d);
         
-        data dataSaya = new data(a, b, c, d);
-        dataSaya.dataDitambah();
+        data dataSatu = new data(a, b, c, d);
+        dataSatu.dataDitambah();
+        
+        System.out.println("1. " + dataSatu.a);
+        System.out.println("2. " + dataSatu.b);
+        System.out.println("3. " + dataSatu.c);
+        System.out.println("4. " + dataSatu.d);
 
         isEditing = false;
         kembali();
@@ -164,8 +171,12 @@ public class posttest2 {
                 harga.set(index, newc);
                 totalbrg.set(index, newd);
                 
-                data dataSaya = new data(newa, newb, newc, newd);
-                dataSaya.dataDiubah();
+                data dataDua = new data(newa, newb, newc, newd);
+                dataDua.dataDiubah();
+                System.out.println("1. " + dataDua.a);
+                System.out.println("2. " + dataDua.b);
+                System.out.println("3. " + dataDua.c);
+                System.out.println("4. " + dataDua.d);
             }
         } catch (IndexOutOfBoundsException | NumberFormatException e) {
             System.out.println(e.getMessage());
@@ -195,8 +206,6 @@ public class posttest2 {
 
                 if (jawab.equalsIgnoreCase("y")) {
                     artikel.remove(index);
-                    data dataSaya = new data(jawab);
-                    dataSaya.dataDihapus();
                 }
             }
         } catch (IndexOutOfBoundsException e) {

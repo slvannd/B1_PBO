@@ -1,3 +1,5 @@
+package POSTTEST2;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,10 +22,7 @@ public class data {
         this.c = harga;
         this.d = total_brg;
     }
-    
-    data(String jawab){
-        this.a = jawab;
-    }
+
     
     void dataDitambah(){
         System.out.println("Data Telah Ditambahkan !");
@@ -37,7 +36,7 @@ public class data {
         System.out.println("Data Telah Diubah !");
     }
     
-    void dataKosong(){
-        System.out.println("Tidak Ada Data !");
+    void dataDitampilkan(){
+        System.out.println("Data Telah Ditampilkan !");
     }
 }
