@@ -1,4 +1,4 @@
-package Posttest2;
+package pkg2009106122_Rizky_Fitriani;
 
 class PetShop {
     String merk;
