@@ -12,7 +12,7 @@ public class Data {
     public Data(int nik, String nama,String ttl,String jk,String agama,String status,String alamat){
         this.nik = nik;
         this.nama = nama;
-        this.alamat= ttl;
+        this.ttl= ttl;
         this.jk = jk;
         this.agama = agama;
         this.status = status;
