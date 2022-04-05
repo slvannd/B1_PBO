@@ -140,6 +140,7 @@ public static void HapusData()throws IOException {
     BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
     int ubahID;
     LihatData();
+
     System.out.print("\nMasukkan Data yang Ingin di Hapus: ");
     ubahID = Integer.parseInt(r.readLine());
     int index = ubahID-1;
