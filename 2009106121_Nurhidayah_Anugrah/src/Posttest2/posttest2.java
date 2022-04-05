@@ -17,9 +17,10 @@ public class posttest2 {
     static boolean isRunning = true;
     static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
     static BufferedReader input = new BufferedReader(inputStreamReader);
-
+    
+    
     static void ShowMenu() throws IOException{
-        System.out.println("Sistem Informasi Lomba dan Beasiswa");        
+        System.out.println("Sistem Informasi Lomba dan Beasiswa MBKM AI 2022\n");        
         System.out.println("[1] Tampilkan seluruh informasi");
         System.out.println("[2] Tambah informasi");
         System.out.println("[3] Edit informasi");
@@ -54,7 +55,6 @@ public class posttest2 {
             } else {
                 for(int i = 0; i < Listinformasi.size(); i++){
                     System.out.println(String.format("[%d] %s",i, Listinformasi.get(i)));
-                    informasi bkt = new informasi("Beasiswa Kaltim Tuntas", "Pemerintah Prov. Kaltim", 22032022, 21052022);
                 }
             }     
         }
