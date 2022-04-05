@@ -88,7 +88,7 @@ public class Main {
         lihatDataSepeda();
 
         System.out.println("Data yang ingin di hapus");
-        System.out.print("Masukan Data ke-");
+        System.out.print("Masukan Data ke- :");
         inputd = Integer.parseInt(br.readLine());
         int indexd = inputd-1;
         if (dataSepeda.size() > indexd){
@@ -102,7 +102,7 @@ public class Main {
         System.out.println("||========== MENU ==========||");
         System.out.println("||1.Tambah Data Sepeda      ||");
         System.out.println("||2.Lihat Data Sepeda       ||");
-        System.out.println("||3.Ubah Data Sepeda      ||");
+        System.out.println("||3.Ubah Data Sepeda        ||");
         System.out.println("||4.Hapus Data Sepeda       ||");
         System.out.println("||5.Exit                    ||");
         System.out.println("||==========================||");
@@ -123,8 +123,8 @@ public class Main {
                 hapusDataSepeda();
                 break;    
             case "5":
-                System.exit(1);
                 System.out.println("DAH BYE BYE");
+                System.exit(1);
             default:
                 System.out.println("SALAH PILIH MENU");
                 break;
