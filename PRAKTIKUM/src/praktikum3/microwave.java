@@ -10,7 +10,7 @@ package praktikum3;
  * @author MSI Gaming
  */
 public class microwave {
-    public String Name;
+     public String Name;
      public String Brand;
      public double version;
      private int Price;
