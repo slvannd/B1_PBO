@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package POSTTEST;
+package Posttest1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author MSi-Modern
  */
-public class POSTTEST1 {
+public class posttest1 {
     static ArrayList Listinformasi = new ArrayList();
     static boolean isRunning = true;
     static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -45,12 +45,12 @@ public class POSTTEST1 {
                 System.exit(0);
                 break;
             default:
-                System.out.println("Pilihan anda tidak tersedia");
+                System.out.println("\nPilihan anda tidak tersedia");
         }
     }
         static void Tampilkan_informasi(){
             if(Listinformasi.isEmpty()){
-                System.out.println("Belum ada data");
+                System.out.println("Belum ada informasi lomba dan beasiswa");
             } else {
                 for(int i = 0; i < Listinformasi.size(); i++){
                     System.out.println(String.format("[%d] %s",i, Listinformasi.get(i)));
