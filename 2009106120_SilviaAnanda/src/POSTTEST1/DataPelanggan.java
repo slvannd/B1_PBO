@@ -10,7 +10,11 @@ package POSTTEST1;
  * @author MSI Gaming
  */
 public class DataPelanggan {
-    String id, nama, jenis_kelamin, alamat, nohp;
+    String id;
+    String nama;
+    String jenis_kelamin;
+    String alamat;
+    String nohp;
     DataPelanggan(String id, String nama, String jenis_kelamin, String alamat, String nohp){
         this.id = id;
         this.nama = nama;
