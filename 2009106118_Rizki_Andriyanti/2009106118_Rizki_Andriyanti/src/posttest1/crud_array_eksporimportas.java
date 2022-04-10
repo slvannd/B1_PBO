@@ -36,7 +36,7 @@ public class crud_array_eksporimportas {
                 break;
             case 2 :
                 System.out.println("IMPOR TAS LUXURY");
-//                impor();
+                impor();
                 break;
             case 3 :
                 System.exit(0);
@@ -49,6 +49,42 @@ public class crud_array_eksporimportas {
     static void ekspor()throws IOException{
         System.out.println("MENU");
         System.out.println("1. Lihat Data Tas yang telah di Ekspor");
+        System.out.println("2. Membuat Data Tas");
+        System.out.println("3. Mengupdate Data Tas");
+        System.out.println("4. Menghapus Data Tas");
+        System.out.println("5. KELUAR");
+            
+        System.out.print("\nSilahkan Pilih : ");
+        int Ekspor = Integer.valueOf(input.readLine());
+        
+         switch (Ekspor) {
+                case 1 :
+                    System.out.println("Lihat Data Tas Luxury");
+                    lihatdatatas();
+                    break;
+                case 2 :
+                    System.out.println("Membuat Data Tas Luxury");
+                    buatdatatas();
+                    break;
+                case 3 :
+                    System.out.println("Update Data Tas Luxury");
+                    editdatatas();
+                    break;
+                case 4 :
+                    System.out.println("Hapus Data Tas Luxury");
+                    hapusdatatas();
+                    break;
+                case 5 :
+                    System.exit(0);
+                    break;
+                default :
+                    System.out.println("\n Inputan Salah\nSilahkan memilih [1-5] ");
+            }
+    }
+    
+    static void impor()throws IOException{
+        System.out.println("MENU");
+        System.out.println("1. Lihat Data Tas yang telah di Impor");
         System.out.println("2. Membuat Data Tas");
         System.out.println("3. Mengupdate Data Tas");
         System.out.println("4. Menghapus Data Tas");
