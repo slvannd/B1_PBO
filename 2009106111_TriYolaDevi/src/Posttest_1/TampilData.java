@@ -1,4 +1,4 @@
-package PenjualanSepeda;
+package Posttest_1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
