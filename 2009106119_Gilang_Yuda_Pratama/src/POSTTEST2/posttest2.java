@@ -130,10 +130,10 @@ public class posttest2 {
         System.out.print("Masukkan Total Barang : ");
         int d = input.nextInt();
         totalbrg.add(d);
-        
+
         data dataSatu = new data(a, b, c, d);
         dataSatu.dataDitambah();
-        
+
         System.out.println("1. " + dataSatu.a);
         System.out.println("2. " + dataSatu.b);
         System.out.println("3. " + dataSatu.c);
@@ -170,7 +170,7 @@ public class posttest2 {
                 warna.set(index, newb);
                 harga.set(index, newc);
                 totalbrg.set(index, newd);
-                
+
                 data dataDua = new data(newa, newb, newc, newd);
                 dataDua.dataDiubah();
                 System.out.println("1. " + dataDua.a);
@@ -181,7 +181,7 @@ public class posttest2 {
         } catch (IndexOutOfBoundsException | NumberFormatException e) {
             System.out.println(e.getMessage());
         }
-        
+
         isEditing = false;
         kembali();
     }

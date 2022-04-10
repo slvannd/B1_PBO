@@ -15,28 +15,27 @@ public class data {
     String b;
     String c;
     int d;
-    
-    data(String artikel, String warna, String harga , int total_brg) {
+
+    data(String artikel, String warna, String harga, int total_brg) {
         this.a = artikel;
         this.b = warna;
         this.c = harga;
         this.d = total_brg;
     }
 
-    
-    void dataDitambah(){
+    void dataDitambah() {
         System.out.println("Data Telah Ditambahkan !");
     }
-    
-    void dataDihapus(){
+
+    void dataDihapus() {
         System.out.println("Data Telah Dihapus !");
     }
-    
-    void dataDiubah(){
+
+    void dataDiubah() {
         System.out.println("Data Telah Diubah !");
     }
-    
-    void dataDitampilkan(){
+
+    void dataDitampilkan() {
         System.out.println("Data Telah Ditampilkan !");
     }
 }
