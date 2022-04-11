@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package posttest2;
+package posttest3;
 
 /**
  *
  * @author RIRI-CHAN
  */
 public class tas {
-    //    property/atribut
-    int kode;
-    String tgl;
-    String namaTas;
-    String brand;
-    String tujuan;
-    String status;
+    private int kode;
+    private String tgl;
+    private String namaTas;
+    private String brand;
+    private String tujuan;
+    private String status;
     
 //    metode khusus
     tas(int kode, String namaTas, String brand, String status, String tujuan, String tgl){
