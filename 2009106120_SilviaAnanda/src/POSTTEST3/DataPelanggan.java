@@ -11,11 +11,11 @@ package POSTTEST3;
  */
 public class DataPelanggan {
 
-    String id_pelanggan;
-    String nama_pelanggan;
-    String jenis_kelamin;
-    String alamat_pelanggan;
-    String nohp;
+    private String id_pelanggan;
+    private String nama_pelanggan;
+    private String jenis_kelamin;
+    private String alamat_pelanggan;
+    private String nohp;
     DataPelanggan(String id_pelanggan, String nama_pelanggan, String jenis_kelamin, String alamat_pelanggan, String nohp){
         this.id_pelanggan = id_pelanggan;
         this.nama_pelanggan = nama_pelanggan;
