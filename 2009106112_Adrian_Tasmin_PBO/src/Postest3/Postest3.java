@@ -491,6 +491,7 @@ public class Postest3 {
             ulg = input.next();
         
         }
+//        Ini adalah menu tersembunyi untuk admin
         else if (menu==4){
             Scanner Admin = new Scanner(System.in);
             System.out.print("Masukkan Kode : ");
