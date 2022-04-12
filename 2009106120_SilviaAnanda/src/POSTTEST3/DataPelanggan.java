@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package POSTTEST3;
 
 /**
@@ -11,11 +12,11 @@ package POSTTEST3;
  */
 public class DataPelanggan {
 
-    private String id_pelanggan;
-    private String nama_pelanggan;
-    private String jenis_kelamin;
-    private String alamat_pelanggan;
-    private String nohp;
+    String id_pelanggan;
+    String nama_pelanggan;
+    String jenis_kelamin;
+    String alamat_pelanggan;
+    String nohp;
     DataPelanggan(String id_pelanggan, String nama_pelanggan, String jenis_kelamin, String alamat_pelanggan, String nohp){
         this.id_pelanggan = id_pelanggan;
         this.nama_pelanggan = nama_pelanggan;
@@ -64,6 +65,6 @@ public class DataPelanggan {
     public void setNohp(String nohp) {
         this.nohp = nohp;
     }
-}
+}     
 
 
