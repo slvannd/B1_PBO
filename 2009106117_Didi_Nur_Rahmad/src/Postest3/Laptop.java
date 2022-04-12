@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest2;
-
-import Postest3.*;
+package Postest3;
 
 /**
  *
  * @author D I D I
  */
 public class Laptop {
-    public String merk;
-    public String warna;
-    public int harga;
-    public int stok;
+    private String merk;
+    private String warna;
+    private int harga;
+    private int stok;
     
 
     //Constructor
@@ -35,6 +33,38 @@ public class Laptop {
     }
     void hapusLaptop(){
         System.out.println("Data Laptop berhasil di Hapus");
+    }
+
+    public String getMerk() {
+        return merk;
+    }
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public String getWarna() {
+        return warna;
+    }
+
+    public void setWarna(String warna) {
+        this.warna = warna;
+    }
+
+    public int getHarga() {
+        return harga;
+    }
+
+    public void setHarga(int harga) {
+        this.harga = harga;
+    }
+
+    public int getStok() {
+        return stok;
+    }
+
+    public void setStok(int stok) {
+        this.stok = stok;
     }
     
 }
