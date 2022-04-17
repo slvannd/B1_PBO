@@ -3,12 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest;
+package Postest3;
 
-import Postest3.Mouse;
-import Postest3.Keyboard;
-import Postest3.Laptop;
-import Postest2.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
@@ -19,19 +15,24 @@ import java.io.*;
 
 
 public class Array_List {
-    //static ArrayList<String> idLaptop = new ArrayList<>();
-    //static ArrayList<String> idMouse = new ArrayList<>();
-    //static ArrayList<String> idKeyboard = new ArrayList<>();
+
     static ArrayList<String> ListLaptop = new ArrayList<>();
     static ArrayList<String> ListMouse = new ArrayList<>();
     static ArrayList<String> ListKeyboard = new ArrayList<>();
+    static ArrayList<String> WarnaLaptop = new ArrayList<>();
+    static ArrayList<String> WarnaMouse = new ArrayList<>();
+    static ArrayList<String> WarnaKeyboard = new ArrayList<>();
     static ArrayList<Integer> TotalLaptop = new ArrayList<>();
     static ArrayList<Integer> TotalMouse = new ArrayList<>();
     static ArrayList<Integer> TotalKeyboard = new ArrayList<>();
+    static ArrayList<Integer> HargaLaptop = new ArrayList<>();
+    static ArrayList<Integer> HargaMouse = new ArrayList<>();
+    static ArrayList<Integer> HargaKeyboard = new ArrayList<>();
     static boolean isEditing = false;
     static Scanner input = new Scanner(System.in);
     static int pilih;
-    
+ 
+    Array_List laptop = new Array_List();    
     
     static void menuUtama(){
         System.out.println("\n\t\t Daftar Stok Aksesoris Komputer MSI");
@@ -178,31 +179,51 @@ public class Array_List {
         }
     }
     
-    static void tambahLaptop(){
-        System.out.print("\nMasukkan merk Laptop : ");
-        String namaL = input.next();
-        ListLaptop.add(namaL);
+    static void tambahLaptop(){        
+        System.out.print("\nMasukkan Merk Laptop : ");
+        String merk = input.next();
+        ListLaptop.add(merk);
+        
+        System.out.print("\nMasukkan warna Laptop : ");
+        String warna = input.next();
+        WarnaLaptop.add(warna);
+        
         System.out.print("\nMasukkan Total Stok : ");
-        int totalL = input.nextInt();
-        TotalLaptop.add(totalL);
+        int stok = input.nextInt();
+        TotalLaptop.add(stok);
+        
+        System.out.print("\nMasukkan Harga Laptop : ");
+        int harga = input.nextInt();
+        HargaLaptop.add(harga);
         
         System.out.print("\nMasukkan lagi? y/n :");
         String lagi = input.next();
         
         if (lagi.equalsIgnoreCase("y")) {
+            
             tambahLaptop();
         } else {
             input.nextLine();
         }  
-       
+        Laptop dataLaptop = new Laptop(merk,warna,stok,harga);
+        dataLaptop.isiLaptop();
     }
     static void tambahMouse(){
-        System.out.print("\nMasukkan merk Mouse : ");
-        String namaM = input.next();
-        ListMouse.add(namaM);
-        System.out.print("\nMasukkan Total Stok : ");
-        int totalM = input.nextInt();
-        TotalMouse.add(totalM);
+        System.out.print("\nMasukkan Merk Mouse : ");
+        String merk = input.next();
+        ListMouse.add(merk);
+        
+        System.out.print("\nMasukkan warna Mouse : ");
+        String warna = input.next();
+        WarnaMouse.add(warna);
+        
+        System.out.print("\nMasukkan Total Mouse : ");
+        int stok = input.nextInt();
+        TotalMouse.add(stok);
+        
+        System.out.print("\nMasukkan Harga Mouse : ");
+        int harga = input.nextInt();
+        HargaMouse.add(harga);
         
         System.out.print("\nMasukkan lagi? y/n :");
         String lagi = input.next();
@@ -212,15 +233,26 @@ public class Array_List {
         } else {
             input.nextLine();
         }  
+        Mouse dataMouse = new Mouse(merk,warna,stok,harga);
+        dataMouse.isiMouse();
        
     }
     static void tambahKeyboard(){
-        System.out.print("\nMasukkan merk Keyboard : ");
-        String namaK = input.next();
-        ListKeyboard.add(namaK);
-        System.out.print("\nMasukkan Total Stok : ");
-        int totalK = input.nextInt();
-        TotalKeyboard.add(totalK);
+        System.out.print("\nMasukkan Merk Keyboard : ");
+        String merk = input.next();
+        ListKeyboard.add(merk);
+        
+        System.out.print("\nMasukkan warna Keyboard : ");
+        String warna = input.next();
+        WarnaKeyboard.add(warna);
+        
+        System.out.print("\nMasukkan Total Keyboard : ");
+        int stok = input.nextInt();
+        TotalKeyboard.add(stok);
+        
+        System.out.print("\nMasukkan Harga Keyboard : ");
+        int harga = input.nextInt();
+        HargaKeyboard.add(harga);
         
         System.out.print("\nMasukkan lagi? y/n :");
         String lagi = input.next();
@@ -230,19 +262,22 @@ public class Array_List {
         } else {
             input.nextLine();
         }  
-       
+        Keyboard dataKeyboard = new Keyboard(merk,warna,stok,harga);
+        dataKeyboard.isiKeyboard();
     }
     static void lihatLaptop(){
         if(ListLaptop.isEmpty()){
             System.out.println("Data Kosong");
             menuLaptop();
         } else {
-            System.out.println("NO\tNama Laptop\t\t\tTotal Stok");
+            System.out.println("NO\tMerk Laptop\t\tWarna\tHarga\tStok");
             System.out.println("===========================================================");
             int i = 0;
-            for(String namaL : ListLaptop){
-                int totalL = TotalLaptop.get(i);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", i+1 , namaL, totalL));
+            for(String merk : ListLaptop){
+                String warna = WarnaLaptop.get(i);
+                int stok = TotalLaptop.get(i);
+                int harga = HargaLaptop.get(i);
+                System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", i+1 , merk, warna, stok, harga));
                 
                 i++;
             }
@@ -256,12 +291,14 @@ public class Array_List {
             System.out.println("Data Kosong");
             menuMouse();
         } else {
-            System.out.println("NO\tNama Mouse\t\t\tTotal Stok");
+            System.out.println("NO\tMerk Mouse\t\tWarna\tHarga\tStok");
             System.out.println("===========================================================");
             int i = 0;
-            for(String namaM : ListMouse){
-                int totalM = TotalMouse.get(i);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", i+1 , namaM, totalM));
+            for(String merk : ListMouse){
+                String warna = WarnaMouse.get(i);
+                int stok = TotalMouse.get(i);
+                int harga = HargaMouse.get(i);
+                System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", i+1 , merk, warna, stok, harga));
                 
                 i++;
             }
@@ -275,12 +312,14 @@ public class Array_List {
             System.out.println("Data Kosong");
             menuKeyboard();
         } else {
-            System.out.println("NO\tNama Keyboard\t\t\tTotal Stok");
+           System.out.println("NO\tMerk Keyboard\t\tWarna\tHarga\tStok");
             System.out.println("===========================================================");
             int i = 0;
-            for(String namaK : ListKeyboard){
-                int totalK = TotalKeyboard.get(i);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", i+1 , namaK, totalK));
+            for(String merk : ListKeyboard){
+                String warna = WarnaKeyboard.get(i);
+                int stok = TotalKeyboard.get(i);
+                int harga = HargaKeyboard.get(i);
+                System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", i+1 , merk, warna, stok, harga));
                 
                 i++;
             }
@@ -290,14 +329,16 @@ public class Array_List {
     }
     }
     static void editLaptop(){
-        System.out.println("NO\tNama Laptop\t\t\tTotal Stok");
-            System.out.println("===========================================================");
-            int index = 0;
-            for(String laptop : ListLaptop){
-                int total = TotalLaptop.get(index);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", index , laptop, total));
-                
-                index++;
+        System.out.println("NO\tMerk Laptop\t\tWarna\tHarga\tStok");
+        System.out.println("===========================================================");
+        int index = 0;
+        for(String merk : ListLaptop){
+            String warna = WarnaLaptop.get(index);
+            int stok = TotalLaptop.get(index);
+            int harga = HargaLaptop.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
+
+            index++;
             }
             
             System.out.println("-----------------------------------------------------------\n");
@@ -308,27 +349,41 @@ public class Array_List {
                 throw new IndexOutOfBoundsException("Index tidak ada !");
             } else {
 
-                System.out.print("Data Laptop baru: ");
-                String namaL = input.next();
+                System.out.print("Merk Laptop baru: ");
+                String newMerk = input.next();
                 
-                System.out.print("Data Total Laptop: ");
-                int totalL = input.nextInt();
+                System.out.print("Data warna Laptop: ");
+                String newWarna = input.next();
+                
+                System.out.print("Data Stok Laptop: ");
+                int newStok = input.nextInt();
+                
+                System.out.print("Data Harga Laptop: ");
+                int newHarga = input.nextInt();
 
                 // update data
-                ListLaptop.set(i, namaL);
-                TotalLaptop.set(i, totalL);
+                ListLaptop.set(i, newMerk);
+                WarnaLaptop.set(i, newWarna);
+                TotalLaptop.set(i, newStok);
+                HargaLaptop.set(i, newHarga);
+                
+                Laptop dataLaptop = new Laptop(newMerk,newWarna,newStok,newHarga);
+                dataLaptop.editLaptop();
             }
+       
         input.nextLine();
     }
     static void editMouse(){
-        System.out.println("NO\tNama Mouse\t\t\tTotal Stok");
-            System.out.println("===========================================================");
-            int index = 0;
-            for(String Mouse : ListMouse){
-                int total = TotalMouse.get(index);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", index , Mouse, total));
-                
-                index++;
+        System.out.println("NO\tMerk Mouse\t\tWarna\tHarga\tStok");
+        System.out.println("===========================================================");
+        int index = 0;
+        for(String merk : ListMouse){
+            String warna = WarnaMouse.get(index);
+            int stok = TotalMouse.get(index);
+            int harga = HargaMouse.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
+
+            index++;
             }
             
             System.out.println("-----------------------------------------------------------\n");
@@ -339,27 +394,40 @@ public class Array_List {
                 throw new IndexOutOfBoundsException("Index tidak ada !");
             } else {
 
-                System.out.print("Data Mouse baru: ");
-                String namaM = input.next();
+                System.out.print("Merk Mouse baru: ");
+                String newMerk = input.next();
                 
-                System.out.print("Data Total Mouse: ");
-                int totalM = input.nextInt();
+                System.out.print("Data warna Mouse: ");
+                String newWarna = input.next();
+                
+                System.out.print("Data Stok Mouse: ");
+                int newStok = input.nextInt();
+                
+                System.out.print("Data Harga Mouse: ");
+                int newHarga = input.nextInt();
 
                 // update data
-                ListMouse.set(i, namaM);
-                TotalMouse.set(i, totalM);
+                ListMouse.set(i, newMerk);
+                WarnaMouse.set(i, newWarna);
+                TotalMouse.set(i, newStok);               
+                HargaMouse.set(i, newHarga);
+                
+                Mouse dataMouse = new Mouse(newMerk,newWarna,newStok,newHarga);
+                dataMouse.editMouse();
             }
         input.nextLine();
     }
     static void editKeyboard(){
-        System.out.println("NO\tNama Keyboard\t\t\tTotal Stok");
-            System.out.println("===========================================================");
-            int index = 0;
-            for(String Keyboard : ListKeyboard){
-                int total = TotalKeyboard.get(index);
-                System.out.println(String.format("[%d] %s\t\t\t\t%s", index , Keyboard, total));
-                
-                index++;
+        System.out.println("NO\tMerk Keyboard\t\tWarna\tHarga\tStok");
+        System.out.println("===========================================================");
+        int index = 0;
+        for(String merk : ListKeyboard){
+            String warna = WarnaKeyboard.get(index);
+            int stok = TotalKeyboard.get(index);
+            int harga = HargaKeyboard.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
+
+            index++;
             }
             
             System.out.println("-----------------------------------------------------------\n");
@@ -370,27 +438,41 @@ public class Array_List {
                 throw new IndexOutOfBoundsException("Index tidak ada !");
             } else {
 
-                System.out.print("Data Laptop baru: ");
-                String namaK = input.next();
+                System.out.print("Merk Keyboard baru: ");
+                String newMerk = input.next();
                 
-                System.out.print("Data Total Keyboard: ");
-                int totalK = input.nextInt();
+                System.out.print("Data warna Keyboard: ");
+                String newWarna = input.next();
+                
+                System.out.print("Data Stok Keyboard: ");
+                int newStok = input.nextInt();
+                
+                System.out.print("Data Harga Keyboard: ");
+                int newHarga = input.nextInt();
 
                 // update data
-                ListKeyboard.set(i, namaK);
-                TotalKeyboard.set(i, totalK);
+                ListKeyboard.set(i, newMerk);
+                WarnaKeyboard.set(i, newWarna);
+                TotalKeyboard.set(i, newStok);
+                HargaKeyboard.set(i, newHarga);
+                
+                Keyboard dataKeyboard = new Keyboard(newMerk,newWarna,newStok,newHarga);
+                dataKeyboard.editKeyboard();
             }
+            
         input.nextLine();
     }
 
     static void hapusLaptop(){
-        System.out.println("NO\tNama Laptop\t\t\tTotal Stok");
+        System.out.println("NO\tMerk Laptop\t\tWarna\tHarga\tStok");
         System.out.println("===========================================================");
         int index = 0;
-        for(String laptop : ListLaptop){
-            int total = TotalLaptop.get(index);
-            System.out.println(String.format("[%d] %s\t\t\t\t%s", index , laptop, total));
-       
+        for(String merk : ListLaptop){
+            String warna = WarnaLaptop.get(index);
+            int stok = TotalLaptop.get(index);
+            int harga = HargaLaptop.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
+
             index++;
         }
         System.out.print("Pilih Index Laptop yang mau dihapus : ");
@@ -400,19 +482,27 @@ public class Array_List {
             throw new IndexOutOfBoundsException("data tidak ketemu!");
         } else {
 
-            
             ListLaptop.remove(i);
+            WarnaLaptop.remove(i);
             TotalLaptop.remove(i);
+            HargaLaptop.remove(i);
+            
+            Laptop dataLaptop = new Laptop("","",i,i);
+            System.out.println("");
+            dataLaptop.hapusLaptop();
+            
         }
         input.nextLine();
     }
     static void hapusMouse(){
-        System.out.println("NO\tNama Mouse\t\t\tTotal Stok");
+        System.out.println("NO\tMerk Mouse\t\tWarna\tHarga\tStok");
         System.out.println("===========================================================");
         int index = 0;
-        for(String Mouse : ListMouse){
-            int total = TotalMouse.get(index);
-            System.out.println(String.format("[%d] %s\t\t\t\t%s", index , Mouse, total));
+        for(String merk : ListMouse){
+            String warna = WarnaMouse.get(index);
+            int stok = TotalMouse.get(index);
+            int harga = HargaMouse.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
        
             index++;
         }
@@ -425,17 +515,26 @@ public class Array_List {
 
             
             ListMouse.remove(i);
+            WarnaMouse.remove(i);
             TotalMouse.remove(i);
+            HargaMouse.remove(i);
+            
+            Mouse dataMouse = new Mouse("","",i,i);
+            System.out.println("");
+            dataMouse.hapusMouse();
         }
         input.nextLine();
+        
     }
     static void hapusKeyboard(){
-        System.out.println("NO\tNama Keyboard\t\t\tTotal Stok");
+        System.out.println("NO\tMerk Keyboard\t\tWarna\tHarga\tStok");
         System.out.println("===========================================================");
         int index = 0;
-        for(String Keyboard : ListKeyboard){
-            int total = TotalKeyboard.get(index);
-            System.out.println(String.format("[%d] %s\t\t\t\t%s", index , Keyboard, total));
+        for(String merk : ListKeyboard){
+            String warna = WarnaKeyboard.get(index);
+            int stok = TotalKeyboard.get(index);
+            int harga = HargaKeyboard.get(index);
+            System.out.println(String.format("[%d] %s\t\t\t%s\t%s\t%s", index , merk, warna, stok, harga));
        
             index++;
         }
@@ -448,11 +547,18 @@ public class Array_List {
 
             
             ListKeyboard.remove(i);
+            WarnaKeyboard.remove(i);
             TotalKeyboard.remove(i);
+            HargaKeyboard.remove(i);
+            
+            Keyboard dataKeyboard = new Keyboard("","",i,i);
+            System.out.println("");
+            dataKeyboard.hapusKeyboard();
         }
         input.nextLine();
     }
     public static void main(String[] args) {
+        
         while(true){
             menuUtama();
         }
