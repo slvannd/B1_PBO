@@ -1,10 +1,10 @@
-package POSTTEST1;
+package POSTTEST3;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class posttest1 {
+public class posttest3 {
 
     static ArrayList<String> artikel;
     static ArrayList<String> warna;
@@ -54,8 +54,8 @@ public class posttest1 {
         System.out.println("==============================================");
         System.out.println("[1] Lihat data barang");
         System.out.println("[2] Tambah data barang");
-        System.out.println("[3] Edit Todo barang");
-        System.out.println("[4] Hapus Todo baraang");
+        System.out.println("[3] Edit data barang");
+        System.out.println("[4] Hapus data baraang");
         System.out.println("[0] Keluar");
         System.out.println("----------------------------------------------");
         System.out.print("Pilih menu :  ");
@@ -131,7 +131,18 @@ public class posttest1 {
         int d = input.nextInt();
         totalbrg.add(d);
 
-        System.out.println("Berhasil ditambahkan!");
+        data dataSatu = new data(a, b, c, d);
+        System.out.println(" ");
+        dataSatu.dataDitambah();
+        dataSatu.getA();
+        dataSatu.getB();
+        dataSatu.getC();
+        dataSatu.getD();
+        System.out.println("DITAMBAHKAN DENGAN GETTER");
+        System.out.println("1. Artikel      : " + dataSatu.getA());
+        System.out.println("2. Warna        : " + dataSatu.getB());
+        System.out.println("3. Harga        : " + dataSatu.getC());
+        System.out.println("4. Total Barang : " + dataSatu.getD());
 
         isEditing = false;
         kembali();
@@ -164,6 +175,19 @@ public class posttest1 {
                 warna.set(index, newb);
                 harga.set(index, newc);
                 totalbrg.set(index, newd);
+
+                data dataDua = new data(newa, newb, newc, newd);
+                System.out.println(" ");
+                dataDua.dataDiubah();
+                dataDua.setA(newa);
+                dataDua.setB(newb);
+                dataDua.setC(newc);
+                dataDua.setD(newd);
+                System.out.println("DI UPDATE DENGAN SETTER");
+                System.out.println("1. Artikel      : " + dataDua.getA());
+                System.out.println("2. Warna        : " + dataDua.getB());
+                System.out.println("3. Harga        : " + dataDua.getC());
+                System.out.println("4. Total Barang : " + dataDua.getD());
             }
         } catch (IndexOutOfBoundsException | NumberFormatException e) {
             System.out.println(e.getMessage());
@@ -193,6 +217,9 @@ public class posttest1 {
 
                 if (jawab.equalsIgnoreCase("y")) {
                     artikel.remove(index);
+                    warna.remove(index);
+                    harga.remove(index);
+                    totalbrg.remove(index);
                 }
             }
         } catch (IndexOutOfBoundsException e) {
