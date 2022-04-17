@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package Postest2;
+package Postest3;
 
 /**
  *
  * @author HP
  */
 class DriannCell {
-//    Atribut
+    private int Pulsa;
+    private String Kuota;
+    private String nama;
+    private String Provider;
     
-    int Pulsa;
-    String Kuota;
-    String nama;
-    String Provider;
+    public String getnama()
+    {return nama;}
+    public void setnama(String newnama)
+    {nama = newnama;}
+    
     
 //    Method Khusus
     public DriannCell(int Pulsa, String Kuota, String nama, String Provider){
@@ -34,3 +37,4 @@ class DriannCell {
     }
     
 }
+

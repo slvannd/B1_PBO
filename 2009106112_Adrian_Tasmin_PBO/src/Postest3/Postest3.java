@@ -3,22 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest2;
-import Postest2.DriannCell;
+package Postest3;
+import Postest3.DriannCell;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
-
 
 
 /**
  *
  * @author HP
  */
-public class Postest2 {
-//    objek
+public class Postest3 {
     public static void main(String[] args) {
-        
+               
         DriannCell  pulsa1 = new DriannCell(5000,"-","Driann Cell","-");
         DriannCell  pulsa2 = new DriannCell(10000,"-","Driann Cell","-");
         DriannCell  pulsa3 = new DriannCell(20000,"-","Driann Cell","-");
@@ -493,6 +491,7 @@ public class Postest2 {
             ulg = input.next();
         
         }
+//        Ini adalah menu tersembunyi untuk admin
         else if (menu==4){
             Scanner Admin = new Scanner(System.in);
             System.out.print("Masukkan Kode : ");
@@ -581,5 +580,3 @@ public class Postest2 {
 }
 }
 }
-    
-
