@@ -5,8 +5,10 @@
  */
 package POSTTEST3;
 
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 /**
  *
@@ -62,8 +64,8 @@ public class Jasajahit {
         System.out.println();
         System.out.println("Silahkan pilih menu dibawah ini :");
         System.out.println("[1] Tampil Data\t\t[4] Hapus Data\t\t[0] Kembali");
-        System.out.println("[2] Tambah Data\t\t[5] Pengurutan Data");
-        System.out.println("[3] Edit Data\t\t[6] Pencarian Data");
+        System.out.println("[2] Tambah Data\t\t");
+        System.out.println("[3] Edit Data\t\t");
         System.out.println();
         System.out.print("Masukkan Pilihan Menu : ");
         pilihanMenu = myInput.nextInt();
@@ -78,15 +80,10 @@ public class Jasajahit {
                 break;
             case 3:
                 System.out.println("Edit Data Pelanggan");
+                dataPelangganEdit();
                 break;
             case 4:
                 System.out.println("Hapus Data Pelanggan");
-                break;
-            case 5:
-                System.out.println("Pengurutan Data Pelanggan");
-                break;
-            case 6:
-                System.out.println("Pencarian Data Pelanggan");
                 break;
             case 0:
                 mainMenu();
@@ -106,8 +103,8 @@ public class Jasajahit {
         System.out.println();
         System.out.println("Silahkan pilih menu dibawah ini :");
         System.out.println("[1] Tampil Data\t\t[4] Hapus Data\t\t[0] Kembali");
-        System.out.println("[2] Tambah Data\t\t[5] Pengurutan Data");
-        System.out.println("[3] Edit Data\t\t[6] Pencarian Data");
+        System.out.println("[2] Tambah Data\t\t");
+        System.out.println("[3] Edit Data\t\t");
         System.out.println();
         System.out.print("Masukkan Pilihan Menu : ");
         pilihanMenu = myInput.nextInt();
@@ -125,12 +122,6 @@ public class Jasajahit {
                 break;
             case 4:
                 System.out.println("Hapus Data Pesanan");
-                break;
-            case 5:
-                System.out.println("Pengurutan Data Pesanan");
-                break;
-            case 6:
-                System.out.println("Pencarian Data Pesanan");
                 break;
             case 0:
                 mainMenu();
@@ -312,6 +303,21 @@ public class Jasajahit {
                     break;
             }
         }
+    }
+    public void hapusDataPelanggan(){
+        
+        System.out.println(labelDataPelanggan);
+        System.out.println(garisDataPelanggan);
+        System.out.println("~~~  HAPUS DATA  ~~~~");
+        System.out.println("====================");
+        System.out.println();
+        
+        System.out.print("data ke berapa yang mau di hapus: ");
+        System.out.println();
+        System.out.println("Data Terhapus");
+       //2 int hapus = input.
+        
+        
     }
 }
 
