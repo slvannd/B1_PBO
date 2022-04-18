@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Posttest3;
+package Posttest4;
 
 /**
  *
@@ -23,7 +23,7 @@ public class Market {
         this.harga = price;
         this.jenis_game = game;
     }
-
+    //Overloading
     Market() {
         this.no = 0;
         this.nama_barang = "";
@@ -31,28 +31,28 @@ public class Market {
         this.harga = 0;
         this.jenis_game = "";
     }
-
+    //Overloading
     Market(int no, String nama) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public int getno() {
+    public int getNo() {
         return no;
     }
 
-    public String getnama() {
+    public String getNama() {
         return nama_barang;
     }
 
-    public String getjenis() {
+    public String getJenis() {
         return jenis_barang;
     }
 
-    public int getprice() {
+    public int getPrice() {
         return harga;
     }
 
-    public String getgame() {
+    public String getGame() {
         return jenis_game;
     }
 
@@ -60,11 +60,11 @@ public class Market {
         this.no = no;
     }
 
-    public void setNama_barang(String nama_barang) {
+    public void setNamaBarang(String nama_barang) {
         this.nama_barang = nama_barang;
     }
 
-    public void setJenis_barang(String jenis_barang) {
+    public void setJenisBarang(String jenis_barang) {
         this.jenis_barang = jenis_barang;
     }
 
@@ -72,19 +72,19 @@ public class Market {
         this.harga = harga;
     }
 
-    public void setJenis_game(String jenis_game) {
+    public void setJenisGame(String jenis_game) {
         this.jenis_game = jenis_game;
     }
 
-    public void BarangSukes() {
+    public void barangSukes() {
         System.out.println("Barang ditambahkan ke dalam Daftar");
     }
 
-    public void BarangGagal() {
+    public void barangGagal() {
         System.out.println("Barang dihapus dari Daftar");
     }
 
-    public void BarangDiubah() {
+    public void barangDiubah() {
         System.out.println("Barang dalam daftar telah diupdate ");
     }
 }
