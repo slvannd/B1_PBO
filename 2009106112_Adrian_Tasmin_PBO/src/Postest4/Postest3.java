@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest3;
+package Postest4;
+import Postest3.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
