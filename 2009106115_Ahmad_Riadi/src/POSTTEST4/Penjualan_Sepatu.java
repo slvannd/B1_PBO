@@ -9,11 +9,9 @@ public class Penjualan_Sepatu {
         ArrayNyaFormal ARRF = new ArrayNyaFormal();
         Scanner pilihan = new Scanner(System.in);
 
-//        ArrayList <sepatu> list_sepatu = new ArrayList <sepatu>();
         int pilih_menu,pilih_menu2;
         int perulangan = 1;
-        // menambah beberapa data barang ke dalam array list
-//        SP.tambahBarang(new sepatu("A11","Sports",  "Nike",      15,"Hitam",15000));
+
         sepatuNonFormal sepatuNF1 = new sepatuNonFormal(); 
         sepatuFormal    sepatuF1  = new sepatuFormal();
 //-----------------------Setter-------------------------------
