@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class posttest4 {
 
-    ArrayList<SepatuKickkers> data;
+    ArrayList<Sepatu> data;
+    ArrayList<Sandal> data1;
+    
     boolean isEditing = false;
     Scanner input = new Scanner(System.in);
 
@@ -31,7 +33,8 @@ public class posttest4 {
 
     }
 
-    public void showMenu(ArrayList<SepatuKickkers> dt) {
+    public void showMenu(ArrayList<Sepatu> dt) {
+        
         System.out.println("APLIKASI PENGELOLAAN DATA SEPATU BRAND KICKERS");
         System.out.println("      MATAHARI MALL LEMBUSWANA SAMARINDA      ");
         System.out.println("==============================================");
@@ -84,14 +87,15 @@ public class posttest4 {
         clearScreen();
     }
 
-    public void lihatdata(ArrayList<SepatuKickkers> dt) {
+    public void lihatdata(ArrayList<Sepatu> dt) {
         clearScreen();
+        new ArrayList<Sepatu>();
         if (dt.size() > 0) {
             System.out.println("\n=============================================================");
             System.out.println("NO\tARTIKEL\t\tWARNA\t\tHARGA\t\tTOTAL");
             System.out.println("=============================================================");
             int index = 0;
-            for (POSTTEST4.SepatuKickkers dt1 : dt) {
+            for (POSTTEST4.Sepatu dt1 : dt) {
                 String a = dt.get(index).getA();
                 String b = dt.get(index).getB();
                 String c = dt.get(index).getC();
@@ -109,9 +113,9 @@ public class posttest4 {
         }
     }
 
-    public void tambahdata(ArrayList<SepatuKickkers> dt) {
+    public void tambahdata(ArrayList<Sepatu> dt) {
         clearScreen();
-        
+        new ArrayList<Sepatu>();
         System.out.print("\nMasukkan Artikel      : ");
         String a = input.nextLine();
         System.out.print("Masukkan Warna        : ");
@@ -121,7 +125,7 @@ public class posttest4 {
         System.out.print("Masukkan Total Barang : ");
         int d = input.nextInt();
 
-        SepatuKickkers dataSatu = new SepatuKickkers(a, b, c, d);
+        Sepatu dataSatu = new Sepatu(a, b, c, d);
         System.out.println(" ");
         dataSatu.dataDitambah();
         dataSatu.setA(a);
@@ -139,10 +143,10 @@ public class posttest4 {
         kembali();
     }
 
-    public void editdata(ArrayList<SepatuKickkers> dt) {
+    public void editdata(ArrayList<Sepatu> dt) {
         isEditing = true;
         lihatdata(dt);
-
+        new ArrayList<Sepatu>();
         try {
             System.out.println("-----------------");
             System.out.print("Pilih Indeks> ");
@@ -161,7 +165,7 @@ public class posttest4 {
                 System.out.print("Data baru Total Barang : ");
                 int newd = input.nextInt();
 
-                SepatuKickkers dataDua = new SepatuKickkers(newa, newb, newc, newd);
+                Sepatu dataDua = new Sepatu(newa, newb, newc, newd);
                 System.out.println(" ");
                 dataDua.dataDiubah();
                 dt.get(index).setA(newa);
@@ -182,11 +186,11 @@ public class posttest4 {
         kembali();
     }
 
-    public void hapusdata(ArrayList<SepatuKickkers> dt) {
+    public void hapusdata(ArrayList<Sepatu> dt) {
         
         isEditing = true;
         lihatdata(dt);
-
+        new ArrayList<Sepatu>();
         System.out.println("-----------------");
         System.out.print("Pilih Indeks> ");
         int index = Integer.parseInt(input.nextLine());

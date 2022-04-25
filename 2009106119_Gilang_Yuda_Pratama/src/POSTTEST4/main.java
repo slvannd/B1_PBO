@@ -17,13 +17,8 @@ public class main {
     public static void main(String[] args) {
         
         posttest4 objek = new posttest4();
-        SepatuKickkers s1 = new SepatuKickkers();
-        
-        
-        // run the program
-        ArrayList <SepatuKickkers> dt = new ArrayList<>();
+        ArrayList <Sepatu> dt = new ArrayList();
         while (true) {
-            s1.dataSHow();
             objek.showMenu(dt);
             
         }
