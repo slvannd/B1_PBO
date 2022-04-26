@@ -174,7 +174,4 @@ public class DATAKOS {
         }
     }
 
-    private void editData(String pilih, String Nama_Kos, String Alamat_Kos, String Pemilik_Kos, int KamarKosong, int Harga_Kos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
