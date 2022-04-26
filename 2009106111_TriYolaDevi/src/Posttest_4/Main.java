@@ -1,4 +1,4 @@
-package Posttest_3;
+package Posttest_4;
 
 import java.util.Scanner;
 import java.io.IOException;
@@ -11,6 +11,11 @@ public class Main {
     Scanner inputdata = new Scanner (System.in);
     int coba = 1;
     while(coba==1){
+        System.out.println("------------------------------");
+        System.out.println("  SELAMAT DATANG DI PROGRAM   ");
+        System.out.println("         DATA SEPEDA          ");
+        System.out.println("------------------------------");
+        System.out.println("                              ");
         System.out.println("||========== MENU ==========||");
         System.out.println("||1.Tambah Data Sepeda      ||");
         System.out.println("||2.Lihat Data Sepeda       ||");

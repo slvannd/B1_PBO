@@ -1,4 +1,4 @@
-package Posttest_3;
+package Posttest_4;
 
 public class Sepeda {
 
@@ -15,7 +15,16 @@ public class Sepeda {
         this.ukuran = ukuran;
         this.harga = harga;
     }
-
+    
+    //overloading
+    public Sepeda(){
+        this.id = 0;
+        this.merk = null;
+        this.warna = null;
+        this.ukuran = null;
+        this.harga = 0;
+        
+    }
     public String getMerk() {
         return merk;
     }
@@ -55,7 +64,7 @@ public class Sepeda {
     public void setHarga(int harga) {
         this.harga = harga;
     }
-
+    
     void TambahData(){
         System.out.println("ID Sepeda ini," + this.id +" sudah ditambahkan"); 
         System.out.println(" ");
@@ -67,5 +76,11 @@ public class Sepeda {
     void HapusData(){
         System.out.println("ID Sepeda ini," + this.id +" sudah dihapus");
         System.out.println(" ");
+    }
+    
+    //override
+    void printNama() {
+        System.out.println(" ");
+        System.out.println("\tYola Cantik");
     }
 }
