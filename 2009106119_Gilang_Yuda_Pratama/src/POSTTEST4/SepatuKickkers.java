@@ -1,4 +1,4 @@
-package POSTTEST3;
+package POSTTEST4;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,17 +10,21 @@ package POSTTEST3;
  *
  * @author MSi-GAMING
  */
-public class data {
+public class SepatuKickkers {
     private String a;
     private String b;
     private String c;
     private int d;
 
-    data(String artikel, String warna, String harga, int total_brg) {
+    SepatuKickkers(String artikel, String warna, String harga, int total_brg) {
         this.a = artikel;
         this.b = warna;
         this.c = harga;
         this.d = total_brg;
+    }
+
+    SepatuKickkers() {
+        return;
     }
 
     void dataDitambah() {
@@ -37,6 +41,9 @@ public class data {
 
     void dataDitampilkan() {
         System.out.println("Data Telah Ditampilkan !");
+    }
+    void dataSHow(){
+        System.out.println("Show Menu !");
     }
 
     /**

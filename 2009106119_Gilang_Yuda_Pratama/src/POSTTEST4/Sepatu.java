@@ -1,4 +1,4 @@
-package POSTTEST3;
+package POSTTEST4;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,33 +10,43 @@ package POSTTEST3;
  *
  * @author MSi-GAMING
  */
-public class data {
+public class Sepatu extends SepatuKickkers {
     private String a;
     private String b;
     private String c;
     private int d;
 
-    data(String artikel, String warna, String harga, int total_brg) {
+    public Sepatu(String artikel, String warna, String harga, int total_brg) {
+        super(artikel, warna, harga, total_brg);
         this.a = artikel;
         this.b = warna;
         this.c = harga;
         this.d = total_brg;
     }
 
+    @Override
     void dataDitambah() {
-        System.out.println("Data Telah Ditambahkan !");
+        System.out.println("Data Telah Ditambahkan sebagai sepatu !");
     }
 
+    @Override
     void dataDihapus() {
-        System.out.println("Data Telah Dihapus !");
+        System.out.println("Data Telah Dihapus sebagai sepatu !");
     }
 
+    @Override
     void dataDiubah() {
-        System.out.println("Data Telah Diubah !");
+        System.out.println("Data Telah Diubah sebagai sepatu !");
     }
 
+    @Override
     void dataDitampilkan() {
-        System.out.println("Data Telah Ditampilkan !");
+        System.out.println("Data Telah Ditampilkan sebagai sepatu !");
+    }
+    
+    @Override
+    void dataSHow(){
+        System.out.println("Ini show Menu !");
     }
 
     /**
