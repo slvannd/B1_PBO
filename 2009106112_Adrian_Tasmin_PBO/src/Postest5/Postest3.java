@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest4;
+package Postest5;
+import Postest4.*;
 import Postest3.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ import java.util.List;
  *
  * @author HP
  */
-public final class Postest3 {
+public class Postest3 {
     public static void main(String[] args) {
                
         DriannCell  pulsa1 = new DriannCell(5000,"-","Driann Cell","-");
