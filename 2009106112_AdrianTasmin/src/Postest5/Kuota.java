@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg2009106112_adrian_tasmin;
+package Postest5;
+
+import Postest4.*;
 
 /**
  *
  * @author HP
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public abstract class Kuota extends Postest3{
+    public void kuota(){
+        System.out.println("Kelas kuota");
     }
-    
 }

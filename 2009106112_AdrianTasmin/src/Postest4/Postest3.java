@@ -3,17 +3,50 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Postest1_Adrian_Tasmin_112;
+package Postest4;
+import Postest3.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
+
 
 /**
  *
  * @author HP
  */
-public class Postest1 {
+public final class Postest3 {
     public static void main(String[] args) {
+               
+        DriannCell  pulsa1 = new DriannCell(5000,"-","Driann Cell","-");
+        DriannCell  pulsa2 = new DriannCell(10000,"-","Driann Cell","-");
+        DriannCell  pulsa3 = new DriannCell(20000,"-","Driann Cell","-");
+        DriannCell  pulsa4 = new DriannCell(50000,"-","Driann Cell","-");
+        DriannCell  pulsa5 = new DriannCell(100000,"-","Driann Cell","-");
+        DriannCell  kuotat1 = new DriannCell(0,"1GB","Driann Cell","Telkomsel");
+        DriannCell  kuotat2 = new DriannCell(0,"2GB","Driann Cell","Telkomsel");
+        DriannCell  kuotat3 = new DriannCell(0,"3GB","Driann Cell","Telkomsel");
+        DriannCell  kuotat4 = new DriannCell(0,"5GB","Driann Cell","Telkomsel");
+        DriannCell  kuotat5 = new DriannCell(0,"10GB","Driann Cell","Telkomsel");
+        DriannCell  kuotatr1 = new DriannCell(0,"1GB","Driann Cell","Tri");
+        DriannCell  kuotatr2 = new DriannCell(0,"2GB","Driann Cell","Tri");
+        DriannCell  kuotatr3= new DriannCell(0,"3GB","Driann Cell","Tri");
+        DriannCell  kuotatr4= new DriannCell(0,"5GB","Driann Cell","Tri");
+        DriannCell  kuotatr5= new DriannCell(0,"10GB","Driann Cell","Tri");
+        DriannCell  kuotaa1 = new DriannCell(0,"1GB","Driann Cell","Axis");
+        DriannCell  kuotaa2 = new DriannCell(0,"2GB","Driann Cell","Axis");
+        DriannCell  kuotaa3 = new DriannCell(0,"3GB","Driann Cell","Axis");
+        DriannCell  kuotaa4 = new DriannCell(0,"5GB","Driann Cell","Axis");
+        DriannCell  kuotaa5 = new DriannCell(0,"10GB","Driann Cell","Axis");
+        DriannCell  kuotax1 = new DriannCell(0,"1GB","Driann Cell","XL");
+        DriannCell  kuotax2 = new DriannCell(0,"2GB","Driann Cell","XL");
+        DriannCell  kuotax3 = new DriannCell(0,"3GB","Driann Cell","XL");
+        DriannCell  kuotax4 = new DriannCell(0,"5GB","Driann Cell","XL");
+        DriannCell  kuotax5 = new DriannCell(0,"10GB","Driann Cell","XL");
+        DriannCell  kuotai1 = new DriannCell(0,"1GB","Driann Cell","Indosat");
+        DriannCell  kuotai2 = new DriannCell(0,"2GB","Driann Cell","Indosat");
+        DriannCell  kuotai3 = new DriannCell(0,"3GB","Driann Cell","Indosat");
+        DriannCell  kuotai4 = new DriannCell(0,"5GB","Driann Cell","Indosat");
+        DriannCell  kuotai5 = new DriannCell(0,"10GB","Driann Cell","Indosat");
         int menu;
         int ypilih;
         int pilih;
@@ -123,6 +156,7 @@ public class Postest1 {
             {
                 System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+pulsa.get(0) );
                 System.out.println("Total Rp."+h_pulsa.get(0));
+                pulsa1.pulsa();
                 System.out.println("Silahkan Ke Kasir [Y/N]");
                 ulg = input.next();
             }
@@ -131,6 +165,7 @@ public class Postest1 {
                 System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+pulsa.get(1) );
                 System.out.println("Total Rp."+h_pulsa.get(1));
                 System.out.println("Silahkan Ke Kasir [Y/N]");
+                pulsa2.pulsa();
                 ulg = input.next();
             } 
             else if (pjumlah == 3)
@@ -138,6 +173,7 @@ public class Postest1 {
                 System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+pulsa.get(2) );
                 System.out.println("Total Rp."+h_pulsa.get(2));
                 System.out.println("Silahkan Ke Kasir [Y/N]");
+                pulsa3.pulsa();
                 ulg = input.next();
             } 
             else if (pjumlah == 4)
@@ -145,6 +181,7 @@ public class Postest1 {
                 System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+pulsa.get(3) );
                 System.out.println("Total Rp."+h_pulsa.get(3));
                 System.out.println("Silahkan Ke Kasir [Y/N]");
+                pulsa4.pulsa();
                 ulg = input.next();
             } 
             else if (pjumlah == 5)
@@ -152,6 +189,7 @@ public class Postest1 {
                 System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+pulsa.get(4));
                 System.out.println("Total Rp."+h_pulsa.get(4));
                 System.out.println("Silahkan Ke Kasir [Y/N]");
+                pulsa5.pulsa();
                 ulg = input.next();
             } 
             else{
@@ -189,30 +227,35 @@ public class Postest1 {
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(0));
                     System.out.println("Total Rp."+h_kuota.get(0));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotat1.kuota();
                     ulg = input.next();
                 }
                 else if(kjumlah == 2){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(1));
                     System.out.println("Total Rp."+h_kuota.get(1));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotat2.kuota();
                     ulg = input.next();
                 }
                 else if(kjumlah == 3){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(2));
                     System.out.println("Total Rp."+h_kuota.get(2));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotat3.kuota();
                     ulg = input.next();
             }
                 else if(kjumlah == 4){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(3));
                     System.out.println("Total Rp."+h_kuota.get(3));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotat4.kuota();
                     ulg = input.next();
                 }
                 else if(kjumlah == 5){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(4));
                     System.out.println("Total Rp."+h_kuota.get(4));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
+                    kuotat5.kuota();
                     ulg = input.next();
                 }
                 else{
@@ -239,30 +282,35 @@ public class Postest1 {
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(0));
                     System.out.println("Total Rp."+h_tri.get(0));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotatr1.kuota();
                     ulg = input.next();
                 }
                 else if(tjumlah == 2){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(1));
                     System.out.println("Total Rp."+h_tri.get(1));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotatr2.kuota();
                     ulg = input.next();
                 }
                 else if(tjumlah == 3){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(2));
                     System.out.println("Total Rp."+h_tri.get(2));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotatr3.kuota();
                     ulg = input.next();
             }
                 else if(tjumlah == 4){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(3));
                     System.out.println("Total Rp."+h_tri.get(3));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotatr4.kuota();
                     ulg = input.next();
                 }
                 else if(tjumlah == 5){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(4));
                     System.out.println("Total Rp."+h_tri.get(4));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotatr5.kuota();
                     ulg = input.next();
                 }
                 else{
@@ -288,30 +336,35 @@ public class Postest1 {
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(0));
                     System.out.println("Total Rp."+h_axis.get(0));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotaa1.kuota();
                     ulg = input.next();
                 }
                 else if(ajumlah == 2){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(1));
                     System.out.println("Total Rp."+h_axis.get(1));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotaa2.kuota();
                     ulg = input.next();
                 }
                 else if(ajumlah == 3){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(2));
                     System.out.println("Total Rp."+h_axis.get(2));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotaa3.kuota();
                     ulg = input.next();
             }
                 else if(ajumlah == 4){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(3));
                     System.out.println("Total Rp."+h_axis.get(3));
                     System.out.println("Silahkan Ke Kasir[Y/N]");
+                    kuotaa4.kuota();
                     ulg = input.next();
                 }
                 else if(ajumlah == 5){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(4));
                     System.out.println("Total Rp."+h_axis.get(4));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotaa5.kuota();
                     ulg = input.next();
                 }
                 else{
@@ -337,30 +390,35 @@ public class Postest1 {
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(0));
                     System.out.println("Total Rp."+h_xl.get(0));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotax1.kuota();
                     ulg = input.next();
                 }
                 else if(xjumlah == 2){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(1));
                     System.out.println("Total Rp."+h_xl.get(1));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotax2.kuota();
                     ulg = input.next();
                 }
                 else if(xjumlah == 3){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(2));
                     System.out.println("Total Rp."+h_xl.get(2));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotax3.kuota();
                     ulg = input.next();
             }
                 else if(xjumlah == 4){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(3));
                     System.out.println("Total Rp."+h_xl.get(3));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotax4.kuota();
                     ulg = input.next();
                 }
                 else if(xjumlah == 5){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(4));
                     System.out.println("Total Rp."+h_xl.get(4));
                     System.out.println("Silahkan Ke Kasir [Y/N]");
+                    kuotax5.kuota();
                     ulg = input.next();
                 }
                 else{
@@ -386,31 +444,35 @@ public class Postest1 {
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(0));
                     System.out.println("Total Rp."+h_ind.get(0));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
-                    ijumlah=1;
+                    kuotai1.kuota();
                     ulg = input.next();
                 }
                 else if(ijumlah == 2){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(1));
                     System.out.println("Total Rp."+h_ind.get(1));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
+                    kuotai2.kuota();
                     ulg = input.next();
                 }
                 else if(ijumlah == 3){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(2));
                     System.out.println("Total Rp."+h_ind.get(2));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
+                    kuotai3.kuota();
                     ulg = input.next();
             }
                 else if(ijumlah == 4){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(3));
                     System.out.println("Total Rp."+h_ind.get(3));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
+                    kuotai4.kuota();
                     ulg = input.next();
                 }
                 else if(ijumlah == 5){
                     System.out.println("Anda Akan Membeli Pulsa Dengan Jumlah "+kuota.get(4));
                     System.out.println("Total Rp."+h_ind.get(4));
                     System.out.println("Silahkan Ke Menu Pembayaran [Y/N]");
+                    kuotai5.kuota();
                     ulg = input.next();
                 }
                 else{
@@ -429,6 +491,7 @@ public class Postest1 {
             ulg = input.next();
         
         }
+//        Ini adalah menu tersembunyi untuk admin
         else if (menu==4){
             Scanner Admin = new Scanner(System.in);
             System.out.print("Masukkan Kode : ");
