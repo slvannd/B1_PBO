@@ -10,12 +10,13 @@ package array;
  * @author MSI Gaming
  */
 public class Array {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    int arr[] = new int[10];
+    try{
+        arr[10] = 25;
+}catch(ArrayOutOfBoundsException e){
+            System.out.println(e);
+}finally{
     
 }
+    
+
